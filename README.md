@@ -77,7 +77,7 @@ Before using Classroom, you need:
 - **Python 3.14 or newer**.
 - A **GitHub organization** that will contain the course repositories.
 - A GitHub account with sufficient administrative permissions in that organization.
-- A [GitHub OAuth App](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/creating-an-oauth-app) configured for the application.
+- A [GitHub OAuth App](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/creating-an-oauth-app) configured for the application using `http://127.0.0.1/callback` as redirect URI.
 
 The GitHub user used by Classroom must have the permissions required to create repositories, manage teams and memberships, and perform the other administrative operations required by the application.
 
@@ -132,6 +132,7 @@ https://github.com/settings/developers
 and open **OAuth Apps**.
 
 Create a new OAuth App and configure the application according to the authentication flow used by Classroom.
+You must to use `http://127.0.0.1/callback` as redirect URI
 
 GitHub provides a **Client ID** and **Client Secret** for the application.
 
@@ -591,7 +592,7 @@ Para utilizar Classroom se necesita:
 - **Python 3.14 o superior**.
 - Una **organización de GitHub** que contenga los repositorios de los cursos.
 - Un usuario de GitHub con permisos administrativos suficientes dentro de esa organización.
-- Una [GitHub OAuth App](https://docs.github.com/en/apps/oauth-apps/creating-an-oauth-app) configurada para la aplicación, lo cual otorga un par de `client_id`/`client_secret` que esta aplicación requiere en su configuración.
+- Una [GitHub OAuth App](https://docs.github.com/en/apps/oauth-apps/creating-an-oauth-app) configurada para la aplicación, usando `http://127.0.0.1/callback` como `redirect URI`,  lo cual otorga un par de `client_id`/`client_secret` que esta aplicación requiere en su configuración.
 
 El usuario utilizado por Classroom debe tener los permisos necesarios para crear repositorios, administrar equipos y membresías y realizar las demás operaciones administrativas requeridas.
 
@@ -646,6 +647,8 @@ https://github.com/settings/developers
 y abrí la sección **OAuth Apps**.
 
 Creá una nueva OAuth App y configurala de acuerdo con el flujo de autenticación utilizado por Classroom.
+Usá `http://127.0.0.1/callback` en el campo redirect URI
+
 
 GitHub proporcionará un **Client ID** y un **Client Secret** para la aplicación.
 
