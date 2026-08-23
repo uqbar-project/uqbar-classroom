@@ -543,7 +543,7 @@ Ver el archivo [`LICENSE`](LICENSE) para consultar el texto completo de la licen
 - [Assignments](#assignments)
 - [License](#license)
 
-## Purpose
+## 0 Purpose
 
 Classroom is intended for instructors who use GitHub as part of their courses.
 
@@ -590,7 +590,7 @@ An assignment represents an exercise and is created from a [GitHub template repo
 
 Assignments can be individual or group-based. Individual assignments create one repository per student. Group assignments create one repository per group in the selected grouping.
 
-## Prerequisites
+## 1 Prerequisites
 
 Before using Classroom, you need:
 
@@ -601,7 +601,7 @@ Before using Classroom, you need:
 
 The GitHub user used by Classroom must have the permissions required to create repositories, manage teams and memberships, and perform the other administrative operations required by the application.
 
-## Installation
+## 2 Installation
 
 Clone this repository and install the application using your preferred Python environment.
 
@@ -639,11 +639,11 @@ classroom groups --help
 classroom assignment --help
 ```
 
-## GitHub Client Configuration
+## 3 GitHub Client Configuration
 
 Classroom uses a [GitHub OAuth App](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/creating-an-oauth-app) to authenticate users.
 
-### Create a GitHub OAuth App
+### 3.1 Create a GitHub OAuth App
 
 In GitHub, go to:
 
@@ -686,7 +686,13 @@ Both values can be removed with:
 classroom client --delete
 ```
 
-### Local storage
+### 3.2 Link the new OAuth application to the organization
+
+Organization members must request authorization for this application in order to access the organization's resources (for example, when creating repositories). To do so, go to the _Integrations/Applications_ section of your personal settings (_Settings_) and then open the _Authorized OAuth Apps_ tab. Click on the name of the application you want to authorize. You will then see a list of organizations you already belong to, with buttons on the right to request authorization or directly grant it if you are an organization owner.
+
+More information can be found in the [GitHub documentation](https://docs.github.com/es/account-and-profile/how-tos/organization-membership/requesting-organization-approval-for-oauth-apps#solicitud-de-aprobaci%C3%B3n-de-la-organizaci%C3%B3n-para-una-oauth-app).
+
+### 3.3 Local storage
 
 Classroom deliberately stores the two pieces of information differently.
 
@@ -720,7 +726,7 @@ There is an important detail about the authentication mechanism. Classroom uses 
 
 As a result, if a new login is attempted after logging out, the browser may reuse the previously authenticated session instead of asking for a different user. The HTML page generated after login therefore provides a link inviting the user to log out of the browser as well. After doing so, the next login will ask for a username and password again.
 
-## Courses
+## 4 Courses
 
 A course represents a course section managed by Classroom.
 
@@ -739,7 +745,7 @@ classroom course -o obj1unq -y 2026 -s 2 -c 2 roster.txt
 
 The roster file contains one GitHub username per line.
 
-### Current course
+### 4.1 Current course
 
 Classroom can keep a **current course** so that it does not have to be specified in every command.
 
@@ -763,7 +769,7 @@ The current course can be cleared with:
 classroom course --unset
 ```
 
-### Tracked courses
+### 4.2 Tracked courses
 
 Classroom also keeps track of courses locally.
 
@@ -783,7 +789,7 @@ classroom course -o obj1unq -y 2026 -s 2 -c 2 --untrack
 
 Untracking a course only removes the local reference. It does not delete the course or its GitHub resources.
 
-### Updating a course
+### 4.3 Updating a course
 
 An existing course can be updated by providing a new roster:
 
@@ -791,7 +797,7 @@ An existing course can be updated by providing a new roster:
 classroom course -o obj1unq -y 2026 -s 2 -c 2 --update roster.txt
 ```
 
-### Deleting a course
+### 4.4 Deleting a course
 
 A course can be deleted with:
 
@@ -801,7 +807,7 @@ classroom course -o obj1unq -y 2026 -s 2 -c 2 --delete
 
 Course modification commands require the course to be explicitly specified.
 
-## Groups
+## 5 Groups
 
 Groups are organized into **groupings**. A grouping represents a particular way of dividing the students of a course into groups. This makes it possible to use different group configurations for different assignments.
 
@@ -832,7 +838,7 @@ obj1unq-2026s2c2-group-1
 
 represents group 1 of the `group` grouping in course `obj1unq-2026s2c2`.
 
-### Creating and managing groups
+### 5.1 Creating and managing groups
 
 To create the default grouping from a roster:
 
@@ -884,7 +890,7 @@ If neither a roster nor `--delete` is provided, the command only displays the gr
 
 The `--grouping` option is useful when the same course needs different group configurations for different assignments. For example, `group` can contain the groups used throughout the course, while `tp1` and `tp2` can contain different groupings for specific assignments.
 
-## Assignments
+## 6 Assignments
 
 An assignment is created from a GitHub template repository.
 
@@ -912,7 +918,7 @@ classroom assignment \
     --private
 ```
 
-### Individual assignments
+### 6.1 Individual assignments
 
 By default, an assignment is individual. For each student in the course team, Classroom creates a repository in the organization.
 
@@ -935,7 +941,7 @@ Classroom also creates the `feedback` branch and the feedback baseline used by t
 
 The repository is then prepared so that a pull request can be used to compare the student's work against the feedback baseline.
 
-### Group assignments
+### 6.2 Group assignments
 
 An assignment can also be created for the groups of a course using the `--group` option:
 
@@ -973,7 +979,7 @@ Groups are obtained from the selected grouping in the course. If the specified g
 
 Group assignments make it possible to use different student divisions for different exercises. For example, a course can have a `group` grouping for the usual groups and a `tp1` grouping with a different division for a particular assignment.
 
-### Creating repositories for specific users
+### 6.3 Creating repositories for specific users
 
 Normally, an individual assignment is created for every student in the course.
 
@@ -991,7 +997,7 @@ The users specified with `--user` replace the course roster for that operation; 
 
 The `--user` option cannot be combined with `--group`.
 
-### Listing assignments
+### 6.4 Listing assignments
 
 To list all assignments for the current course:
 
@@ -1009,7 +1015,7 @@ Classroom searches the organization's repositories using the course prefix and d
 
 The output also shows how many repositories have been generated for each assignment.
 
-### Inspecting an assignment
+### 6.5 Inspecting an assignment
 
 To inspect the repositories belonging to a particular assignment:
 
@@ -1035,7 +1041,7 @@ For group assignments, it reports:
 
 Users who are not students may appear in an individual assignment, but their commits are not tracked.
 
-## License
+## 7. License
 
 Classroom is free software distributed under the terms of the **GNU General Public License v3.0 (GPLv3)**.
 
