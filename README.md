@@ -14,14 +14,14 @@ Documentation: [English](#english) · [Español](#español)
 
 ## Tabla de contenidos
 
-- [0 Propósito](#propósito)
-- [1 Requisitos previos](#requisitos-previos)
-- [2 Instalación](#instalación)
-- [3 Configuración del cliente de GitHub](#configuración-del-cliente-de-github)
-- [4 Cursos](#cursos)
-- [5 Grupos](#grupos)
-- [6 Assignments](#assignments-1)
-- [7 Licencia](#licencia)
+- [0 Propósito](#0-propósito)
+- [1 Requisitos previos](#1-requisitos-previos)
+- [2 Instalación](#2-instalación)
+- [3 Configuración del cliente de GitHub](#3-configuración-del-cliente-de-github)
+- [4 Cursos](#4-cursos)
+- [5 Grupos](#5-grupos)
+- [6 Assignments](#6-assignments)
+- [7 Licencia](#7-licencia)
 
 ## 0 Propósito
 
@@ -534,14 +534,14 @@ Ver el archivo [`LICENSE`](LICENSE) para consultar el texto completo de la licen
 
 ## Table of Contents
 
-- [0 Purpose](#purpose)
-- [1 Prerequisites](#prerequisites)
-- [2 Installation](#installation)
-- [3 GitHub Client Configuration](#github-client-configuration)
-- [4 Courses](#courses)
-- [5 Groups](#groups)
-- [6 Assignments](#assignments)
-- [7 License](#license)
+- [0 Purpose](#0-purpose)
+- [1 Prerequisites](#1-prerequisites)
+- [2 Installation](#2-installation)
+- [3 GitHub Client Configuration](#3-github-client-configuration)
+- [4 Courses](#4-courses)
+- [5 Groups](#5-groups)
+- [6 Assignments](#6-assignments-1)
+- [7 License](#7-license)
 
 ## 0 Purpose
 
