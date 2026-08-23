@@ -534,14 +534,14 @@ Ver el archivo [`LICENSE`](LICENSE) para consultar el texto completo de la licen
 
 ## Table of Contents
 
-- [Purpose](#purpose)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [GitHub Client Configuration](#github-client-configuration)
-- [Courses](#courses)
-- [Groups](#groups)
-- [Assignments](#assignments)
-- [License](#license)
+- [0 Purpose](#purpose)
+- [1 Prerequisites](#prerequisites)
+- [2 Installation](#installation)
+- [3 GitHub Client Configuration](#github-client-configuration)
+- [4 Courses](#courses)
+- [5 Groups](#groups)
+- [6 Assignments](#assignments)
+- [7 License](#license)
 
 ## 0 Purpose
 
