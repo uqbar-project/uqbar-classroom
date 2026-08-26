@@ -4,7 +4,7 @@ from.client import client
 from .logout import logout
 from .whoami import whoami
 from .course import course
-from .assigment import assignment
+from .assignment import assignment
 from .groups import groups
 
 import textwrap
